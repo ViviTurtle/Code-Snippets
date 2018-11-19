@@ -1,7 +1,7 @@
-###Function Programmings Snippets
+### Function Programmings Snippets
 All Functional Programming Related Tips and Tricks
 
-####Functions can be wrapped, nested, or decorated
+#### Functions can be wrapped, nested, or decorated
 **- Wrapping Functions**
 
 Outputs can be modified within functions

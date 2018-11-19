@@ -3,14 +3,11 @@ Snippets
 
 **This is a repository of reusable code**
 
-[Data Structures](../Data Structures)
-
->This contains a list of example Data Structures and a checklist to ensure existing Data Strucutres are not being remade from scratch
 
 SDLC Checklist
 ====
 This is used as a general checklist to ensure proper projects are being managed
-####Asserts
+#### Asserts
 Asserts should be used for **non-logic** conditionals to assist during runtime debugging
 
 **Example:**
@@ -23,7 +20,7 @@ Conventions
 =========
 Mostly Syntax Clean code issues here
 
-####Printing Strings (For Readability)
+#### Printing Strings (For Readability)
 >Note: All these methods support format specification to format into decimal, hex, string...
 
 *See https://docs.python.org/2.4/lib/typesseq-strings.html*
@@ -44,7 +41,7 @@ The good guy is Alice and the bad guy is Bob
 
 ```
 
-####Python Comma Placement
+#### Python Comma Placement
 Lists/Dicts should have a comma at the end of each line to help fix issues with missing commas in lists
 ```python
 #This is a valid list (note the comma at the end)
