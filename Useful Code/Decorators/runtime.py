@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import time
 
 def show_runtime_27(func):

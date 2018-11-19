@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class Parent(object):
     """__best_fruit is initialized with mangling via __"""
     def __init__(self):
@@ -22,9 +24,13 @@ class Child(Parent):
 
 parent = Parent()
 print(dir(parent))
+assert "_method" not in dir(parent), "Name Mangling went wrong"
+assert "_Parent__method" in dir(parent), "Name Mangling went wrong"
 parent._Parent__method()
 
 
 child = Child("Strawberrys")
 print(dir(child))
+assert "_method" not in dir(parent), "Name Mangling went wrong"
+assert "_Child__method" in dir(child), "Name Mangling went wrong"
 child._Child__method()

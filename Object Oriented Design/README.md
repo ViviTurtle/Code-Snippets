@@ -24,6 +24,18 @@ Subclassing may have overlap variables and method names. If Name Mangling is not
 Note: If Name mangling /w Python keywords just append a "_" character e.g.
 > def method(self, class_):
 
+### Operator Overloading
+Anytime classes need to be compared to itself (Combining, diff, shifted, encoded), operator overloading can be used to simplify
 
+*See [Operator Overloading](https://www.python-course.eu/python3_magic_methods.php)*
+
+**Example:**
+```python
+
+ def __add__(self, other):
+        l = self.Converse2Metres() + other.Converse2Metres()
+        return Length(l / Length.__metric[self.unit], self.unit )]
+
+```
 
  

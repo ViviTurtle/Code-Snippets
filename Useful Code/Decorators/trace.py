@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def trace(func):
 	""" Decorates any function via @trace with a Calling / Return Statement for debugging issues"""
 	def wrapper(*args, **kwargs):

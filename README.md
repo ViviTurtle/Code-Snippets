@@ -7,6 +7,7 @@ Snippets
 SDLC Checklist
 ====
 This is used as a general checklist to ensure proper projects are being managed
+
 ### Asserts
 Asserts should be used for **non-logic** conditionals to assist during runtime debugging
 
@@ -14,7 +15,6 @@ Asserts should be used for **non-logic** conditionals to assist during runtime d
 ```python
 assert(0 <= price <= product[price], "Impossible Discount for Price found")
 ```
-
 
 Conventions
 =========
@@ -44,7 +44,7 @@ The good guy is Alice and they are drinking badc0ffee
 ### Python Comma Placement
 Lists/Dicts should have a comma at the end of each line to help fix issues with missing commas in lists
 ```python
-#This is a valid list (note the comma at the end)
+#This is a valid list (note the comma at the end of strawberry)
 fruits = [
     "apples",
     "orange",
