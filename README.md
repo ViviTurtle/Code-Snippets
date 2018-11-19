@@ -3,7 +3,7 @@ Snippets
 
 **This is a repository of reusable code**
 
-[Data Structures](Data Structures)
+[Data Structures](../Data Structures)
 
 >This contains a list of example Data Structures and a checklist to ensure existing Data Strucutres are not being remade from scratch
 
