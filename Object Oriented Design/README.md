@@ -2,6 +2,19 @@ Object Oriented Checklist
 =====
 This is used as a general checklist to ensure proper clean code
 
+### \_\_repr__ and \_\_str__
+All classes should have \_\_repre__() or \_\_str__() function to show the its values in REPL or Print statements
+
+>Default: >>> fruits -> fruits at \<address>
+
+>\__repr__(): >>> fruits --> fruit("apple", small...)
+
+>\__str__(): >>> fruits -> The fruit is an apple
+
+
+
+*see [reprstr](reprstr.py)*
+
 ### Private Classes, Methods, and Variables
 Wildcard imports will **not** import **private classes only** (private variables/methods is just a convention) 
 
@@ -10,14 +23,14 @@ Wildcard imports will **not** import **private classes only** (private variables
 *see [Private Class Example](Private)*
 
 
-### Variable Name Mangling 
+### Name Mangling 
 **- Subclassing**
 
 Subclassing may have overlap variables and method names. If Name Mangling is not used, child methods/variables will override the parents
 
 >How: Prepend __ to methods and variables e.g. __var1, __method1()
 
-*see [Name Mangling Example](NameMangling)*
+*see [Name Mangling Example](name_mangling.py)*
 
 **- Python Keyword Mangling**
 
@@ -35,6 +48,27 @@ Anytime classes need to be compared to itself (Combining, diff, shifted, encoded
  def __add__(self, other):
         l = self.Converse2Metres() + other.Converse2Metres()
         return Length(l / Length.__metric[self.unit], self.unit )]
+
+```
+
+### Unique Decorators
+
+**Abstract Classes**
+
+Abstract classes with abstract methods can be created in order to ensure certain functions are implemented when subclassed.
+
+*Note: replace raise NotImplementedError() since it does not check during initiation*
+```python
+from abc import ABCMeta, abstractmethod
+
+class MyAbstractClass(metaclass=ABCMeta):
+
+    @abstractmethod
+    def required_implementation(self):
+        pass
+        
+    def inherited_methozd(self):
+        pass
 
 ```
 

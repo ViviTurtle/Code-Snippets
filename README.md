@@ -4,7 +4,7 @@ Snippets
 **This is a repository of reusable code**
 
 
-SDLC Checklist
+General Checklist
 ====
 This is used as a general checklist to ensure proper projects are being managed
 
@@ -16,6 +16,27 @@ Asserts should be used for **non-logic** conditionals to assist during runtime d
 assert 0 <= price <= product[price], "Impossible Discount for Price found"
 ```
 
+### Unpacking iterables
+When passing on a tuple, list, or dictionary to a function that takes on seperate arguments, you can simply use packing 
+and unpacking features of python
+
+*Note: Use ** when Unpacking keyword arguments*
+
+**Example:**
+```python
+current_car = {"color": "tan", "mileage":92314, "make":"Toyota", "model": "prius", "year": 2011}
+new_car = {"color": "red", "mileage":0, "make":"Toyota", "model": "prius", "year": 2018}
+def buy_car(new_color, new_mileage, new_make, new_model, new_year):
+    current_car["color"] = new_color
+    current_car["mileage"] = new_mileage
+    current_car["make"] = new_make
+    current_car["model"] = new_model
+    current_car["year"] = new_year
+
+#Note that although we defined this function with more than more argument, we unpacked new_car into this function
+buy_car(*new_car.values())
+```
+    
 Conventions
 =========
 Mostly Syntax Clean code issues here
@@ -66,3 +87,29 @@ for _ in range(32):
 18
 
 ```
+
+
+### Return None
+By Default, all functions return None even if **not** explicitly written
+```python
+#The following functions are exactly the same
+def none_v1():
+    """Returns None everytime"""
+    if (1 > 2):
+        return "This will never happen"
+        
+def none_v2():
+    """Returns None everytime"""
+    if (1 > 2):
+        return "This will never happen"
+    return None
+
+def none_v3():
+    """Returns None everytime"""
+    if (1 > 2):
+        return "This will never happen"
+    else:
+        return None
+        
+```
+
