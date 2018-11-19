@@ -13,7 +13,7 @@ Asserts should be used for **non-logic** conditionals to assist during runtime d
 
 **Example:**
 ```python
-assert(0 <= price <= product[price], "Impossible Discount for Price found")
+assert 0 <= price <= product[price], "Impossible Discount for Price found"
 ```
 
 Conventions
