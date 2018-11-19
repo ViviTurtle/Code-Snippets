@@ -2,7 +2,7 @@ Object Oriented Checklist
 =====
 This is used as a general checklist to ensure proper clean code
 
-#### Private Classes, Methods, and Variables
+### Private Classes, Methods, and Variables
 Wildcard imports will **not** import **private classes only** (private variables/methods is just a convention) 
 
 >How: Prepend _ to classes, methods, and variables i.e. _private_class(object):
@@ -10,7 +10,7 @@ Wildcard imports will **not** import **private classes only** (private variables
 *see [Private Class Example](Private)*
 
 
-#### Variable Name Mangling 
+### Variable Name Mangling 
 **- Subclassing**
 
 Subclassing may have overlap variables and method names. If Name Mangling is not used, child methods/variables will override the parents
