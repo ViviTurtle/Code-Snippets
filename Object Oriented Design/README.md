@@ -46,8 +46,8 @@ Anytime classes need to be compared to itself (Combining, diff, shifted, encoded
 ```python
 
  def __add__(self, other):
-        l = self.Converse2Metres() + other.Converse2Metres()
-        return Length(l / Length.__metric[self.unit], self.unit )]
+		l = self.Converse2Metres() + other.Converse2Metres()
+		return Length(l / Length.__metric[self.unit], self.unit )]
 
 ```
 
@@ -63,13 +63,23 @@ from abc import ABCMeta, abstractmethod
 
 class MyAbstractClass(metaclass=ABCMeta):
 
-    @abstractmethod
-    def required_implementation(self):
-        pass
-        
-    def inherited_methozd(self):
-        pass
-
+	@abstractmethod
+	def required_implementation(self):
+		pass
+		
+	def inherited_methozd(self): 
+		pass
 ```
 
- 
+### Class Variables
+Class Variables can be used for **shared** variables across all instances of a class. E.g. When you want to see how many times a class has been instantitiated
+
+*Note: Class variables are accessed via self.\__class\__.<var_name>*
+
+*See [Class Variable Example](class_variables.py)*
+
+
+### Factory Methods
+Factory Methods can be implemented via **class methods**. Class Methods are similar to @staticmethods except that they have write access to the overall class
+
+*See [Factory Method Example](factory_method.py)*
